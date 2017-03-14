@@ -1,0 +1,58 @@
+react 笔记
+好处:
+1.组件化------分工，合作
+2,虚拟DOM----性能高
+3，跨平台----移动端
+缺点:
+1,学习曲线陡
+2，设计思想特别
+-----------------------------------------------------------------------
+React 全家桶（技术站）
+1.react主体
+2，webPack,grunt ,gulp  自动化构建工具
+3，flex:布局
+4.React-Route:路由
+5.redux：View层
+6.Monha:测试
+7.Istanbul：覆盖率
+----------------------------------------
+JSX ：  react依赖它
+1.增强型的js语法------HTML代码可以往js里放
+2，babel：专门编译jsx
+bower ----js的编译器
+bower install babel  
+注意:
+1.babel  有而且仅有一个父级元素;
+2.模板字符串
+   var oDiv=<div>{aa}</div>
+bower  install react    下载react
+最强:
+1,组件
+2，状态
+--------------------------------
+组件怎么玩
+1，如何定义 组件 ===class
+     class   名字  extends  React.Compontent{
+         render(){
+             return <span>111</span>
+         }
+     }
+2.如何使用组件
+     ReactDOM.render(
+           var oDiv= document.getElementById("div1")
+            <Comp/>,
+             oDiv      
+     )
+------------------------------
+属性----死的
+1.状态---变的
+constructor   里面  ----this.state={};
+方法里面-----this.setState({});
+2.事件大小写:
+   onChange
+   onClick
+3.  绑定事件
+    onChange={fn}     fn是个方法 ，不是函数
+    onChange={this.fn}     不对，需要bind
+    onChange ={this.fn.bind（this）}    ok
+4.用contructor 的时候，必须用super
